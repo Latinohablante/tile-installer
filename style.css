@@ -16,6 +16,7 @@ header {
     display:flex;
     grid-column: 1/-1;
     justify-content: space-between;
+    align-items: center;
 }
 .logo {
     background: lightblue;
@@ -101,13 +102,19 @@ nav, .nav, .menu {
     transform: translateY(8px);
 }
 
+.pregunta {
+    
+    grid-column: 1/-1;
+    grid-row: 3/6;
+}
+
  /* CARRUSEL DE IMAGENES */
 
 
  .carrousel{
     width: 100%;
     grid-column: 1/-1;
-    grid-row: 3/6;
+    grid-row: 6/9;
 
 }
 
