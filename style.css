@@ -1,202 +1,182 @@
-
-*  {
+/* RESET  */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-html {
-    font-size: 62.5%;
-}
-body {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-}
+
+/* HEADER */
 header {
-    display:flex;
-    grid-column: 1/-1;
+    height: 100px;
+    background: #0074A2;
+    padding: 0 50px;
+    color: #EFECCA;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .logo {
-    background: lightblue;
+    text-transform: uppercase;
+    color: #001F3F;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
 }
-nav {
-    padding: 0.5rem;
-    background-color: #dcdc39;
-    background-color: #086cb4;
-    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2rem;
-    grid-column: 1/-1;
-}
-
-
-nav, .nav, .menu {
-    display: flex;
-    justify-content:center;
-    align-items:center;
+.menu a {
+    color: #CCCCCC;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
 }
 
-.nav {
+.mostrar-menu,
+.esconder-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display:none;
+    transition: 0.4s;
+}
+
+.mostrar-menu {
+    order:1;
+}
+.menu a:hover,
+.esconder-menu:hover {
+    color: #001F3F;
+}
+.mostrar-menu:hover {
+    color:#001F3F;
+}
+#check {
+    display: none;
+}
+/* BANNER */
+#banner {
+    padding: 0 50px;
+    background-image: url(./img/banner.jpg);
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner::before{
+    content: "";
+    background: rgba(75, 31, 117, 0.377);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+.contenido-banner {
     position: relative;
-    background-color: #fff;
-    padding: 2.5rem;
-    transition: 0.5s;
-    border-radius: 50px;
-    overflow: hidden;
-    box-shadow: 0 8px 15px rgba(0,0,0,.2);
-}
-
-.menu {
-    width: 0;
-    overflow: hidden;
-    transition: 0.5s;
-    
-}
-
-.nav input:checked ~ .menu {
-    width: 45rem;
-}
-
-.menu li {
-    list-style: none;
-    margin: 0 0.8rem;
+    color: #EFECCA;
     display: flex;
-    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3 {
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+
+}
+.contenido-banner h3 span {
+    font-weight: 600;
+}
+
+.boton-empezar {
+    text-decoration: none;
+    background: #0074A2;
+    color: #EFECCA;
+    border: 1px solid #0074A2;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+    border-radius: 10px;
+}
+.boton-empezar:hover {
+    background: #001F3F;
+}
+/* PERSONAS */
+.instalador {
+    width: 200px;
+    height: 200px;
+}
+#personas{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
 
-.menu li a {
+#personas img {
+    border-radius: 100%;
+}
+#personas div {
+    padding: 30px 30px;
+}
+#personas div h4 {
+    color: #001F3F;
+    font-size: 20px;
+    margin: 15px 0px;
+
+}
+#personas div p {
+    color:#001f3f99;
+    font-size: 18px;
+}
+.boton-saber-mas {
+    display: inline-block;
     text-decoration: none;
-    color: #666;
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: 0.5s;
-}
-
-.menu li a:hover {
-    color: #161919;
-}
-
-.nav input {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    opacity: 0;
-}
-
-.nav span {
-    position: absolute;
-    left: 2.8rem;
-    width: 30px;
-    height: 4px;
-    border-radius: 50px;
-    background-color: #666;
-    pointer-events: none;
-    transition: 0.5s;
-}
-.nav span:nth-child(2) {
-    transform: translateY(-8px);
-}
-.nav span:nth-child(3) {
-    transform: translateY(8px);
-}
-
-.pregunta {
-    
-    grid-column: 1/-1;
-    grid-row: 3/6;
-}
-
- /* CARRUSEL DE IMAGENES */
-
-
- .carrousel{
-    width: 100%;
-    grid-column: 1/-1;
-    grid-row: 6/9;
+    color: #0074A2;
+    padding: 10px 30px;
+    border: 3px solid #0074A2;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+    font-size:large;
 
 }
-
-.conteCarrousel{
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
+.boton-saber-mas:hover {
+    background: #001F3F;
+    color: #EFECCA;
 }
 
-.itemCarrousel{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.itemCarrouselTarjeta{
-    width: 100%;
-    height: 100%;
-}
-
-#itemCarrousel-1{
-    background-image: url(./img/slider1.jpg);
-}
-
-#itemCarrousel-2{
-    background-image: url(./img/slider2.jpg);
-}
-
-#itemCarrousel-3{
-    background-image: URL(./img/slider3.jpg);
-}
-
-.conteCarrouselController{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.conteCarrouselController > a{
-    text-decoration: none;
-    font-size: 2em;
-    color: grey;
-}
-
-.itemCarrouselArrows > a > i{
-    color: white;
-}
-
-/* FIN CARRUSEL DE IMAGENES */
-
-
-
-
-
-@media (max-width:468px) {
-    
-
-    .menu li:nth-child(2) {
-        display: none;
+/* RESPONSIVE */
+@media(max-width:768px) {
+    /* HEADER */
+    .mostrar-menu,
+    .esconder-menu {
+        display: block;
     }
+    .menu {
+        position: fixed;
+        width: 80%;
+        height: 100vh;
+        background: #0074A2;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index:100;
+        transition: 0.8s;
+    }
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu {
+        position: absolute;
+        top:40px;
+        right: 40px;
 
-    .nav input:checked ~ span {
-        background-color: #f974a1;
     }
-    
-    .nav span:nth-child(2) {
-        transform: translateY(-8px);
+    #check:checked ~ .menu {
+        right:0;
     }
-    
-    .nav input:checked ~ span:nth-child(2) {
-        transform: translateY(0) rotate(-45deg);
+    /* PERSONAS */
+    #personas {
+        flex-direction: column;
     }
-    .nav span:nth-child(3) {
-        transform: translateY(8px);
-    }
-    
-    .nav input:checked ~ span:nth-child(3) {
-        transform: translateY(0) rotate(45deg);
-        
-    }
-}
-
-@media (min-width:468px) {
-    
 }

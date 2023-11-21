@@ -3,63 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tyle installer</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <script src="https://kit.fontawesome.com/887a835504.js" crossorigin="anonymous"></script>
+    <title>Enchapador</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-    <h1>Aquí va un logo</h1>
-    </div>
-    <form action="https://www.google.com/search" method="get">
-      <fieldset>
-          <legend>Busqueda</legend>
-              <!-- Input Busqueda-->
-              <label for="busqueda">Buscar en google:</label>
-              <br>
-              <input type="search" name="q" id="busqueda">
-              <br>
-              <input type="submit" value="Enviar">
-      </fieldset>
-    </form>
-  </header>
-    <nav>
-    <div class="nav">
-        <input type="checkbox">
-          <span></span>
-          <span></span>
-          <div class="menu">
-            <li><a href="#">inicio</a></li>
-            <li><a href="#">sobre mí</a></li>
-            <li><a href="#">mi trabajo</a></li>
-            <li><a href="#">contacto</a></li>
-          </div>
-    </div>
-    </nav>
-    <section class="pregunta">
-      <h1>¿Cansado de que tu casa siempre luce igual?</h1>
-    </section>
+    <header>
+        <h2 class="logo">tile installer</h2>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">&#8801</label>
     
-    <!-- Carrusel de imagenes -->
-    <div class="carrousel">
-      <div class="conteCarrousel">
-          <div class="itemCarrousel" id="itemCarrousel-1">
-              <div class="itemCarrouselTarjeta">A</div>
-          </div>
-          <div class="itemCarrousel" id="itemCarrousel-2">
-              <div class="itemCarrouselTarjeta">B</div>
-          </div>
-          <div class="itemCarrousel" id="itemCarrousel-3">
-              <div class="itemCarrouselTarjeta">C</div>
-              
-          </div>
-      </div>
-      <div class="conteCarrouselController">
-          <a href="#itemCarrousel-1">•</a>
-          <a href="#itemCarrousel-2">•</a>
-          <a href="#itemCarrousel-3">•</a>
-      </div>
-  </div>
+        <nav class="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Sobre mí</a>
+            <a href="#">Mis trabajos</a>
+            <a href="#">Contácto</a>
+            <label for="check" class="esconder-menu">
+                &#215
+            </label>
+        </nav>
+    </header>
+    <section id="banner">
+        <div class="contenido-banner">
+            <h3><span>TU ENCHAPADOR</span> DE CONFIANZA <br> A SOLO UN CLICK DE DISTANCIA </h3>
+            <a href="#" class="boton-empezar">COTIZAR</a>
+        </div>
+    </section>
+
+    <section id="personas">
+        <div>
+            <img class="instalador" src="./img/instalador.jpg" alt="persona">
+            <h4>Wilson Niño Salazar</h4>
+            <p>Soy un apasionado de la construcción y desde muy joven me ha gustado este mundo de convertir espacios simples en obras modernas a través de las baldozas y de la personalidad de mis clientes. En el pasado fui parte del equipo de enchapadores de Corona por 20 años y actualmente soy un trabajador independiente.</p>
+            <a href="#" class="boton-saber-mas">Saber más</a>
+        </div>
+    </section>
+
+    <section id="iconos">
+        <div id="contenido-inconos">
+            <div>
+                <img src="" alt="">
+                <h6>Instalación de baldosas</h6>
+                <p>¿Cansado de ver el mismo estilo antiguo de siempre en tu casa? Yo soy Wilson el enchapador y puedo ayudarte</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h6>Instalación de sanitarios</h6>
+                <p>¿Deseas modernizar tu red de sanitarios? contáctame soy el indicado para ese trabajo</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h6>Plomería</h6>
+                <p>Todo lo relacionado con tubería, en la cocina, en el baño, o cualquier tipo de goteras</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
