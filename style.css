@@ -126,15 +126,15 @@ nav, .nav, .menu {
 }
 
 #itemCarrousel-1{
-    background-color: rgb(226, 50, 50);
+    background-image: url(./img/slider1.jpg);
 }
 
 #itemCarrousel-2{
-    background-color: rgb(50, 200, 226);
+    background-image: url(./img/slider2.jpg);
 }
 
 #itemCarrousel-3{
-    background-color: rgb(200, 226, 50);
+    background-image: URL(./img/slider3.jpg);
 }
 
 .conteCarrouselController{
