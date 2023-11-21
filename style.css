@@ -13,7 +13,9 @@ body {
     grid-template-rows: repeat(12, 1fr);
 }
 nav {
+    padding: 0.5rem;
     background-color: #dcdc39;
+    background-color: #086cb4;
     font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2rem;
     grid-column: 1/-1;
@@ -43,7 +45,7 @@ nav, .nav, .menu {
 }
 
 .nav input:checked ~ .menu {
-    width: 450px;
+    width: 45rem;
 }
 
 .menu li {
@@ -75,7 +77,7 @@ nav, .nav, .menu {
 
 .nav span {
     position: absolute;
-    left: 3rem;
+    left: 2.8rem;
     width: 30px;
     height: 4px;
     border-radius: 50px;
@@ -83,29 +85,120 @@ nav, .nav, .menu {
     pointer-events: none;
     transition: 0.5s;
 }
-
-.nav input:checked ~ span {
-    background-color: #f974a1;
-}
-
 .nav span:nth-child(2) {
     transform: translateY(-8px);
-}
-
-.nav input:checked ~ span:nth-child(2) {
-    transform: translateY(0) rotate(-45deg);
 }
 .nav span:nth-child(3) {
     transform: translateY(8px);
 }
 
-.nav input:checked ~ span:nth-child(3) {
-    transform: translateY(0) rotate(45deg);
-    
+ /* CARRUSEL DE IMAGENES */
+
+
+ .carrousel{
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 3/6;
+
 }
 
+.conteCarrousel{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselArrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.itemCarrouselArrows > i:hover {
+    cursor: pointer;
+}
+
+#itemCarrousel-1{
+    background-color: rgb(226, 50, 50);
+}
+
+#itemCarrousel-2{
+    background-color: rgb(50, 200, 226);
+}
+
+#itemCarrousel-3{
+    background-color: rgb(200, 226, 50);
+}
+
+.conteCarrouselController{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 2em;
+    color: grey;
+}
+
+.itemCarrouselArrows > a > i{
+    color: white;
+}
+
+/* FIN CARRUSEL DE IMAGENES */
+
+
+
+
+
 @media (max-width:468px) {
+    
+
     .menu li:nth-child(2) {
         display: none;
     }
+
+    .nav input:checked ~ span {
+        background-color: #f974a1;
+    }
+    
+    .nav span:nth-child(2) {
+        transform: translateY(-8px);
+    }
+    
+    .nav input:checked ~ span:nth-child(2) {
+        transform: translateY(0) rotate(-45deg);
+    }
+    .nav span:nth-child(3) {
+        transform: translateY(8px);
+    }
+    
+    .nav input:checked ~ span:nth-child(3) {
+        transform: translateY(0) rotate(45deg);
+        
+    }
+}
+
+@media (min-width:468px) {
+    
 }
