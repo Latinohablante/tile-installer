@@ -17,6 +17,9 @@ header {
     grid-column: 1/-1;
     justify-content: space-between;
 }
+.logo {
+    background: lightblue;
+}
 nav {
     padding: 0.5rem;
     background-color: #dcdc39;
