@@ -143,6 +143,47 @@ header {
     color: #EFECCA;
 }
 
+/* ICONOS */
+#iconos {
+    padding: 0px 50px;
+    background: #0074A2;
+}
+.contenido-iconos {
+    padding: 50px 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.contenido-iconos div img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+.contenido-iconos div h6 {
+    color: #EFECCA;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px 0px;
+
+}
+.contenido-iconos div p {
+    color: #001F3F;
+    font-size: 15px;
+}
+
+.contenido-iconos div {
+    flex:1;
+    margin: 20px 0;
+    border-right: #001F3F20;
+}
+#icono-mobile {
+    background-origin: padding-box;
+}
+.boton-iconos {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
 /* RESPONSIVE */
 @media(max-width:768px) {
     /* HEADER */
