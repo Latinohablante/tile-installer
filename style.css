@@ -154,6 +154,11 @@ header {
     justify-content: space-between;
     text-align: center;
 }
+.contenido-iconos div {
+    flex:1;
+    margin: 20px 0;
+    border-right: 2px solid #001F3F20;
+}
 .contenido-iconos div img {
     width: 250px;
     height: auto;
@@ -171,12 +176,9 @@ header {
     font-size: 15px;
 }
 
-.contenido-iconos div {
-    flex:1;
-    margin: 20px 0;
-    border-right: #001F3F20;
-}
+
 #icono-mobile {
+    border: none;
     background-origin: padding-box;
 }
 .boton-iconos {
@@ -219,5 +221,13 @@ header {
     /* PERSONAS */
     #personas {
         flex-direction: column;
+    }
+
+    /* ICONOS */
+    .contenido-iconos {
+        flex-direction: column;
+    }
+    .contenido-iconos div {
+        border:none
     }
 }
