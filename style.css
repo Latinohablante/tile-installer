@@ -17,7 +17,7 @@
 /* HEADER */
 header {
     height: 100px;
-    background: var(--quinto-color);
+    background: #086cb4;
     padding: 0 50px;
     color: var(--primer-color);
     display: flex;
@@ -200,6 +200,80 @@ header {
     padding-bottom: 50px;
 }
 
+/* FORMULARIO */
+
+#contacto {
+    background: var(--cuarto-color);
+    padding: 50px 0;
+    color: var(--primer-color);
+}
+#contacto h4 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+#contacto form {
+    max-width: 80%;
+    margin: 0 auto;
+}
+.datos-form {
+    display: flex;
+}
+.datos-form div {
+    padding: 10px;
+    flex: 1;
+}
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+form input,
+form textarea {
+    background: var(--tercer-color);
+    border-radius: 10px;
+    border: 2px solid var(--primer-color);
+    padding: 10px 5px;
+    outline: 0;
+    color: var(--segundo-color);
+    width: 100%;
+}
+form input:focus,
+form textarea:focus {
+    border-color: var(--tercer-color);
+    box-shadow: 0 0 0 1px var(--tercer-color);
+}
+form input::placeholder,
+form textarea::placeholder {
+    color: var(--primer-color);
+}
+.mensaje {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.boton-formulario .boton-saber-mas {
+    display: block;
+    border: 2px solid var(--tercer-color);
+    text-align: center;
+    transition: 0.4s;
+    background: var(--segundo-color);
+}
+.boton-formulario .boton-saber-mas:hover {
+    background: var(--quinto-color);
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: #536d88;
+    text-align: center;
+    transition: 0.4s;
+    padding: 10px 0;
+
+}
+
+
+
 /* RESPONSIVE */
 @media(max-width:768px) {
     /* HEADER */
@@ -243,5 +317,10 @@ header {
     }
     .contenido-iconos div {
         border:none
+    }
+
+    /* FORMULARIO */
+    .datos-form {
+        flex-direction: column;
     }
 }
