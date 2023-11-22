@@ -90,14 +90,14 @@ section div h3 {
 
 .contenido-banner h3 {
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 600;
     padding: 50px 0px;
     text-shadow: -1px 1px 1px var(--cuarto-color);
     
 
 }
 .contenido-banner h3 span {
-    font-weight: 600;
+    font-weight:900;
     text-shadow: -1px 1px 1px var(--cuarto-color);
 }
 
@@ -111,6 +111,7 @@ section div h3 {
     transition: all 0.4s;
     border-radius: 10px;
     font-weight: bold;
+    margin: 0 auto;
 }
 .boton-empezar:hover {
     background: var(--quinto-color);
@@ -169,6 +170,9 @@ section div h3 {
 #iconos {
     background: var(--segundo-color);
     
+}
+#iconos h1, #iconos2 h1 {
+    text-align: center;
 }
 #iconos2 {
     background: var(--tercer-color);
