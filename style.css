@@ -159,20 +159,21 @@ header {
 
 /* ICONOS */
 #iconos {
-    padding: 0px 50px;
     background: var(--segundo-color);
+    
 }
 .contenido-iconos {
-    padding: 50px 50px 0 50px;
-    display: flex;
-    justify-content: space-between;
+    padding: 50px;
     text-align: center;
+    display: grid;
+    margin: 0 auto;
+    grid-template-areas:    "uno dos tres"
+                            "cuatro cinco seis";
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
-.contenido-iconos div {
-    flex:1;
-    margin: 20px 0;
-    border-right: 2px solid #001F3F20;
-}
+
 .contenido-iconos div img {
     width: 250px;
     height: auto;
@@ -198,6 +199,24 @@ header {
 .boton-iconos {
     text-align: center;
     padding-bottom: 50px;
+}
+.uno {
+    grid-area: uno;
+}
+.dos {
+    grid-area: dos;
+}
+.tres {
+    grid-area: tres;
+}
+.cuatro {
+    grid-area: cuatro;
+}
+.cinco {
+    grid-area: cinco;
+}
+.seis {
+    grid-area: seis;
 }
 
 /* FORMULARIO */
@@ -313,14 +332,29 @@ footer {
 
     /* ICONOS */
     .contenido-iconos {
-        flex-direction: column;
-    }
-    .contenido-iconos div {
-        border:none
+        grid-template-areas:    "uno"
+                                "dos"
+                                "tres"
+                                "cuatro"
+                                "cinco"
+                                "seis";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
     /* FORMULARIO */
     .datos-form {
         flex-direction: column;
+    }
+}
+
+@media (min-width:480px) and (max-width:968px) {
+    /* ICONOS */
+    .contenido-iconos {
+        grid-template-areas:    "uno dos"
+                                "tres cuatro"
+                                "cinco seis";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr ;
     }
 }
