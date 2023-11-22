@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -76,10 +77,12 @@ header {
     height: 45vh;
     left: 0;
 }
+section div h3 {
+    text-align: center;
+}
 .contenido-banner {
     position: relative;
     color: var(--primer-color);
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,6 +93,7 @@ header {
     font-weight: 400;
     padding: 50px 0px;
     text-shadow: -1px 1px 1px var(--cuarto-color);
+    
 
 }
 .contenido-banner h3 span {
@@ -109,8 +113,8 @@ header {
     font-weight: bold;
 }
 .boton-empezar:hover {
-    background: var(--primer-color);
-    color: var(--quinto-color);
+    background: var(--quinto-color);
+    color: var(--primer-color);
 }
 /* PERSONAS */
 .instalador {
@@ -123,20 +127,24 @@ header {
     justify-content: center;
     text-align: center;
 }
-
-#personas img {
+#personas2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#personas img, #personas2 img {
     border-radius: 100%;
 }
-#personas div {
+#personas div, #personas2 div {
     padding: 30px 30px;
 }
-#personas div h4 {
+#personas div h4, #personas2 div h4 {
     color: var(--quinto-color);
     font-size: 20px;
     margin: 15px 0px;
 
 }
-#personas div p {
+#personas div p,  #personas2 div p{
     color:var(--tercer-color);
     font-size: 18px;
 }
@@ -161,6 +169,10 @@ header {
 #iconos {
     background: var(--segundo-color);
     
+}
+#iconos2 {
+    background: var(--tercer-color);
+    color: var(--primer-color);
 }
 .contenido-iconos {
     padding: 50px;
@@ -296,7 +308,7 @@ footer {
 
 
 /* RESPONSIVE */
-@media(max-width:768px) {
+@media(max-width:868px) {
     /* HEADER */
     .mostrar-menu,
     .esconder-menu {
@@ -328,7 +340,7 @@ footer {
         right:0;
     }
     /* PERSONAS */
-    #personas {
+    #personas, #personas2 {
         flex-direction: column;
     }
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">MAESTRO</h2>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">&#8801</label>
+    
+        <nav class="menu">
+            <a href="./index.html">Inicio</a>
+            <a href="./about.html">Sobre mí</a>
+            <a href="./trabajos.html">Mis trabajos</a>
+            <a href="./testimonios.html">Testimonios</a>
+            <a href="./formulario.html">Contácto</a>
+            <label for="check" class="esconder-menu">
+                &#215
+            </label>
+        </nav>
+    </header>
+    
+    <section id="contacto">
+        <h4>Contacta conmigo</h4>
+        <form action="#">
+            <div class="datos-form">
+                <div class="nombre">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                </div>
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+            </div>
+            <div class="mensaje">
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribe aquí el tipo de trabajo que desees yo haga en tu hogar. Y agrega la mayor cantidad de detalles posible"></textarea>
+            </div>
+            <div class="boton-formulario">
+                <a href="#" class="boton-saber-mas">Enviar mensaje</a>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy2023 Maestro</p>
+    </footer>
+</body>
+</html>
