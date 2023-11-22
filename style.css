@@ -348,7 +348,7 @@ footer {
     }
 }
 
-@media (min-width:480px) and (max-width:968px) {
+@media (min-width:630px) and (max-width:968px) {
     /* ICONOS */
     .contenido-iconos {
         grid-template-areas:    "uno dos"
