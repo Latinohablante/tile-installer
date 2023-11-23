@@ -312,7 +312,7 @@ footer {
 
 
 /* RESPONSIVE */
-@media(max-width:808px) {
+@media(max-width:768px) {
     /* HEADER */
     .mostrar-menu,
     .esconder-menu {
