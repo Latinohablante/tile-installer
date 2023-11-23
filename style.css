@@ -19,6 +19,32 @@ h1 {
 }
 
 /* ESTILOS BUSCADOR */
+
+.buscar {
+    display: flex;
+    align-items: center;
+    background: #086cb4;
+}
+
+.caja {
+    width: 200px; 
+    box-sizing: border-box;
+    padding: 10px;
+    margin-right: 5px; 
+    background: white;
+}
+
+.lupa {
+    width: 100px; 
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #eac195; 
+    color: var(--quinto-color);
+    border: none;
+    cursor: pointer;
+}
+
+/*
 .buscar {
     display: flex;
     background: #086cb4;
@@ -33,7 +59,7 @@ h1 {
     display: flex;
     flex-grow: 2;
 }
-
+*/
 
 /* HEADER */
 header {
