@@ -15,6 +15,7 @@
     --quinto-color:#0f132e;
 }
 
+
 /* HEADER */
 header {
     height: 100px;
@@ -326,7 +327,7 @@ footer {
         right: -100%;
         top: 0;
         text-align: center;
-        padding: 100px 0px;
+        padding: 50px 0px;
         z-index:100;
         transition: 0.8s;
     }
