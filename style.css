@@ -24,6 +24,7 @@ h1 {
     display: flex;
     align-items: center;
     background: #086cb4;
+    padding-top: 10px;
 }
 
 .caja {
