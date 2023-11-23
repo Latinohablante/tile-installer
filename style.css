@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+h1 {
+    color:var(--quinto-color)
+}
 
 /* VARIABLES DE COLORES  */
 :root {
@@ -15,10 +18,26 @@
     --quinto-color:#0f132e;
 }
 
+/* ESTILOS BUSCADOR */
+.buscar {
+    display: flex;
+    background: #086cb4;
+    
+}
+.buscar .lupa {
+    display: flex;
+    flex-grow: 1;    
+}
+.buscar .caja {
+    background: #FFF;
+    display: flex;
+    flex-grow: 2;
+}
+
 
 /* HEADER */
 header {
-    height: 100px;
+    height: 80px;
     background: #086cb4;
     padding: 0 50px;
     color: var(--primer-color);
@@ -294,7 +313,7 @@ form textarea::placeholder {
     border: 2px solid var(--tercer-color);
     text-align: center;
     transition: 0.4s;
-    background: var(--segundo-color);
+    background: var(--primer-color);
 }
 .boton-formulario .boton-saber-mas:hover {
     background: var(--quinto-color);
