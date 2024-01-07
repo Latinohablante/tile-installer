@@ -87,6 +87,7 @@ header {
     text-decoration: none;
     padding: 0 10px;
     transition: 0.4s;
+    text-align: center;
 }
 
 
@@ -175,7 +176,15 @@ section div h3 {
     border-radius: 10px;
     padding: 20px;
     color: var(--primer-color);
-    opacity: 0.95;
+    opacity: 0.90;
+}
+
+#iconos2 .contenido-iconos div {
+    background-color: var(--segundo-color);
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--primer-color);
+    opacity: 0.90;
 }
 
 #iconos .contenido-iconos div p{
