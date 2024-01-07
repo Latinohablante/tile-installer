@@ -169,6 +169,12 @@ section div h3 {
     color: var(--primer-color);
 }
 /* PERSONAS */
+
+.contenido-iconos div {
+    background-color: var(--quinto-color);
+    border-radius: 10px;
+    padding: 20px;
+}
 .instalador {
     width: 200px;
     height: 200px;
@@ -220,6 +226,7 @@ section div h3 {
 /* ICONOS */
 #iconos {
     background: var(--segundo-color);
+    background-image: url(./img/orden.avif);
     
 }
 #iconos h1, #iconos2 h1 {
