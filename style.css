@@ -170,10 +170,16 @@ section div h3 {
 }
 /* PERSONAS */
 
-.contenido-iconos div {
+#iconos .contenido-iconos div {
     background-color: var(--quinto-color);
     border-radius: 10px;
     padding: 20px;
+    color: var(--primer-color);
+    opacity: 0.95;
+}
+
+#iconos .contenido-iconos div p{
+    color: var(--primer-color);
 }
 .instalador {
     width: 200px;
