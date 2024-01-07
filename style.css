@@ -82,6 +82,11 @@ header {
     padding: 0 10px;
     transition: 0.4s;
 }
+.menu {
+    display:flex;
+    align-items: center;
+}
+
 .menu a {
     color: var(--primer-color);
     text-transform: uppercase;
@@ -89,6 +94,8 @@ header {
     padding: 0 10px;
     transition: 0.4s;
 }
+
+
 
 .mostrar-menu,
 .esconder-menu {
