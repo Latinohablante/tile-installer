@@ -20,26 +20,20 @@ h1 {
 
 /* ESTILOS BUSCADOR */
 
-.buscar {
-    display: flex;
-    align-items: center;
-    background: #086cb4;
-    padding-top: 10px;
-}
+
 
 .caja {
-    width: 200px; 
+    width: 50%; 
     box-sizing: border-box;
     padding: 10px;
     margin-right: 5px; 
     background: white;
-    margin-left: 60px;
 
     
 }
 
 .lupa {
-    width: 100px; 
+    width: 30%; 
     box-sizing: border-box;
     padding: 10px;
     background-color: #eac195; 
@@ -386,6 +380,7 @@ footer {
         padding: 50px 0px;
         z-index:100;
         transition: 0.8s;
+        flex-direction: column;
     }
     .menu a {
         display: block;
