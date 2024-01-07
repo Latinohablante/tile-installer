@@ -89,6 +89,9 @@ header {
     transition: 0.4s;
     text-align: center;
 }
+.menu form {
+    padding: 20px;
+}
 
 
 
@@ -399,12 +402,16 @@ footer {
         right: -100%;
         top: 0;
         text-align: center;
-        padding: 50px 0px;
+        padding: 20px 0px;
         z-index:100;
         transition: 0.8s;
         flex-direction: column;
     }
     .menu a {
+        display: block;
+        padding: 20px;
+    }
+    .menu form {
         display: block;
         padding: 20px;
     }
