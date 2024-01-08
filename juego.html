@@ -17,13 +17,14 @@
         }
 
         body {
-            background-color: var(--tercer-color);
+            background-color: var(--segundo-color);
+            background-image: url(./img/orden.avif);
             color: var(--primer-color);
             margin: 0;
             font-family: "PixelFont", sans-serif;
         }
         main {
-            max-width: 1000px;
+            max-width: 90%;
             margin: 100px auto 50px;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -46,13 +47,13 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 20px;
-            color: var(--main-color);
+            color: var(--primer-color);
         }
 
         button {
             background: var(--main-color);
-            height: 100px;
-            width: 100px;
+            height: 80px;
+            width: 80px;
             border-radius: 5px;
             font-size: 40px;
             color:black;
@@ -113,7 +114,7 @@
     </header>
     <main>
         <section class="seccion1">
-            <h1>Juegos de pares de baldosas</h1>
+            <h1>Encuentra todos los pares de baldosas</h1>
             <table>
                 <tr>
                     <td><button id="0" onclick="destapar(0)"></button></td>
