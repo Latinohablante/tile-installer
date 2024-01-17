@@ -16,6 +16,9 @@ document.getElementById("login-form").addEventListener("submit",async (e)=>{
   if(!res.ok) return mensajeError.classList.toggle("escondido",false);
   const resJson = await res.json();
   if(resJson.redirect){
-    window.location.href = "index.html";
+    alert("Estoy aquí")
+    window.location.href = resJson.redirect;
+  } else {
+    alert("No existe")
   }
 })

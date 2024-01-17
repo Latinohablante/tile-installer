@@ -9,7 +9,7 @@ async function login(req,res){
     if(!usuarioAResvisar){
       return res.status(400).send({status:"Error",message:"Error durante login"})
     }
-      res.send({status:"ok",message:"Usuario loggeado",redirect:"/admin"});
+      res.send({status:"ok",message:"Usuario loggeado",redirect:"/index.html"});
   }
   
   async function register(req,res){
@@ -28,7 +28,7 @@ async function login(req,res){
     }
     usuarios.push(nuevoUsuario);
     console.log(usuarios);
-    return res.status(201).send({status:"ok",message:`Usuario ${nuevoUsuario.user} agregado`,redirect:"/"})
+    return res.status(201).send({status:"ok",message:`Usuario ${nuevoUsuario.user} agregado`,redirect:"/index.html"})
   }
   
   export const methods = {
