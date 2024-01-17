@@ -21,7 +21,10 @@ h1 {
 
 /* ESTILOS BUSCADOR */
 
-
+/* Estilos juego seccion */
+#juego {
+    margin: 0 auto;
+}
 
 .caja {
     width: 50%; 
@@ -457,5 +460,16 @@ footer {
                                 "cinco seis";
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr ;
+    }
+}
+
+@media (min-width:270px) and (max-width:630px) {
+    .contenido-iconos {
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px !important;
+
     }
 }
