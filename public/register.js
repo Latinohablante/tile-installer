@@ -1,9 +1,9 @@
 const mensajeError = document.getElementsByClassName("error")[0];
-
+console.log("algo");
 document.getElementById("register-form").addEventListener("submit",async(e)=>{
   e.preventDefault();
   console.log(e.target.children.user.value)
-  const res = await fetch("http://localhost:4000/api/register",{
+  const res = await fetch("http://localhost:4000/users",{
     method:"POST",
     headers:{
       "Content-Type" : "application/json"
@@ -12,6 +12,7 @@ document.getElementById("register-form").addEventListener("submit",async(e)=>{
       user: e.target.children.user.value,
       email: e.target.children.email.value,
       password: e.target.children.password.value
+      
     })
   });
   if(!res.ok) return mensajeError.classList.toggle("escondido",false);

@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "nombre": "Backend Java"
+    },
+    {
+      "id": "3",
+      "nombre": "Backend C#"
+    },
+    {
+      "id": "4",
+      "nombre": "Backend Go"
+    },
+    {
+      "id": "5",
+      "nombre": "Desarrollo M"
+    },
+    {
+      "id": "54",
+      "nombre": "Error"
+    },
+    {
+      "id": "1",
+      "nombre": "Este es un dato"
+    },
+    {
+      "id": "6da6",
+      "user": "users",
+      "email": "w@as.com",
+      "password": "123"
+    },
+    {
+      "id": "522d",
+      "user": "Otro",
+      "email": "ugasdh@gmsail.com",
+      "password": "1234"
+    },
+    {
+      "id": "3951",
+      "user": "Easd",
+      "email": "ret@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "a9a7",
+      "user": "users",
+      "email": "asdda@gmaik.com",
+      "password": "5432"
+    },
+    {
+      "id": "2a3b",
+      "user": "Otro",
+      "password": "1234"
+    },
+    {
+      "id": "2f21",
+      "user": "Otro",
+      "password": "1234"
+    },
+    {
+      "id": "1d75",
+      "user": "Otro",
+      "password": "1234"
+    }
+  ]
+}
