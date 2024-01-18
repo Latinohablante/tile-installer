@@ -3,7 +3,7 @@ export function put(url, objeto) {
     fetch(url, {
       method: "PUT",
       headers: {
-        "Content-type": "application/json; charset=UTF-8'",
+        "Content-type": "application/json; charset=UTF-8",
       },
       body: JSON.stringify(objeto),
     })

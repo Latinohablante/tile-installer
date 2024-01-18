@@ -128,28 +128,28 @@
             <h1>Encuentra todos los pares de baldosas</h1>
             <table id="juego">
                 <tr>
-                    <td><button id="0" onclick="destapar(0)"></button></td>
-                    <td><button id="1" onclick="destapar(1)"></button></td>
-                    <td><button id="2" onclick="destapar(2)"></button></td>
-                    <td><button id="3" onclick="destapar(3)"></button></td>
+                    <td><button id="0" data-destapar="0"></button></td>
+                    <td><button id="1" data-destapar="1"></button></td>
+                    <td><button id="2" data-destapar="2"></button></td>
+                    <td><button id="3" data-destapar="3"></button></td>
                 </tr>
                 <tr>
-                    <td><button id="4" onclick="destapar(4)"></button></td>
-                    <td><button id="5" onclick="destapar(5)"></button></td>
-                    <td><button id="6" onclick="destapar(6)"></button></td>
-                    <td><button id="7" onclick="destapar(7)"></button></td>
+                    <td><button id="4" data-destapar="4"></button></td>
+                    <td><button id="5" data-destapar="5"></button></td>
+                    <td><button id="6" data-destapar="6"></button></td>
+                    <td><button id="7" data-destapar="7"></button></td>
                 </tr>
                 <tr>
-                    <td><button id="8" onclick="destapar(8)"></button></td>
-                    <td><button id="9" onclick="destapar(9)"></button></td>
-                    <td><button id="10" onclick="destapar(10)"></button></td>
-                    <td><button id="11" onclick="destapar(11)"></button></td>
+                    <td><button id="8" data-destapar="8"></button></td>
+                    <td><button id="9" data-destapar="9"></button></td>
+                    <td><button id="10" data-destapar="10"></button></td>
+                    <td><button id="11" data-destapar="11"></button></td>
                 </tr>
                 <tr>
-                    <td><button id="12" onclick="destapar(12)"></button></td>
-                    <td><button id="13" onclick="destapar(13)"></button></td>
-                    <td><button id="14" onclick="destapar(14)"></button></td>
-                    <td><button id="15" onclick="destapar(15)"></button></td>
+                    <td><button id="12" data-destapar="12"></button></td>
+                    <td><button id="13" data-destapar="13"></button></td>
+                    <td><button id="14" data-destapar="14"></button></td>
+                    <td><button id="15" data-destapar="15"></button></td>
                 </tr>
             </table>
         </section>
@@ -160,106 +160,5 @@
         </section>
     </main>
 
-    <script>
-        let tarjetasDestapadas = 0;
-        let tarjeta1 = null;
-        let tarjeta2 = null;
-        let primerResultado = null;
-        let segundoResultado = null;
-        let movimientos = 0;
-        let aciertos = 0;
-        let temporizador = false;
-        let timer = 50;
-        const timerInicial = 50;
-        let tiempoRegresivoId = null;
-
-        let winAudio = new Audio('./sounds/win.wav');
-        let clickAudio = new Audio('./sounds/click.wav'); 
-        let loseAudio = new Audio('./sounds/lose.wav');
-        let rightAudio = new Audio('./sounds/right.wav');
-        let wrongAudio = new Audio('./sounds/wrong.wav');
-
-        let mostrarMovimientos = document.getElementById("movimientos");
-
-        let mostrarAciertos = document.getElementById("aciertos");
-
-        let mostrarTiempo = document.getElementById("t-restante");
-
-        let numeros = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
-        numeros = numeros.sort(() => {return Math.random() -0.5});
-
-        function contarTiempo() {
-            //
-            tiempoRegresivoId = setInterval(() => {
-                timer--;
-                mostrarTiempo.innerHTML = `tiempo: ${timer} segundos`;
-                if (timer == 0) {
-                    clearInterval(tiempoRegresivoId);
-                    bloquearTarjetas();
-                    loseAudio.play();
-                }
-            },1000);
-        }
-
-        function bloquearTarjetas() {
-            for (let i = 0; i <= 15; i++) {
-                let tarjetaBloqueada = document.getElementById(i)
-                tarjetaBloqueada.innerHTML = `<img src="./img/img/b${numeros[i]}.png" alt="img${numeros[i]}">`;
-                tarjetaBloqueada.disabled = true;
-            }
-        }
-
-        //función principal
-
-        function destapar(id) {
-            if(temporizador == false) {
-                contarTiempo();
-                temporizador = true;
-            }
-            tarjetasDestapadas++;
-            if(tarjetasDestapadas == 1) {
-                tarjeta1 = document.getElementById(id);
-                primerResultado = numeros[id];
-                tarjeta1.innerHTML = `<img src="./img/img/b${primerResultado}.png">`;
-                clickAudio.play();
-                tarjeta1.disabled = true;
-
-            } else if (tarjetasDestapadas == 2) {
-                tarjeta2 = document.getElementById(id);
-                segundoResultado = numeros[id];
-                tarjeta2.innerHTML = `<img src="./img/img/b${segundoResultado}.png">`;
-                clickAudio.play()
-                tarjeta2.disabled = true;
-                movimientos++;
-                mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}`;
-                if ( primerResultado == segundoResultado ) {
-                    tarjetasDestapadas = 0;
-                    rightAudio.play();
-                    aciertos++;
-                    mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
-
-                    if (aciertos == 8) {
-                        clearInterval(tiempoRegresivoId);
-                        mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
-                        mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}`;
-                        let tiempoTotal = timerInicial - timer
-                        mostrarTiempo.innerHTML = `Fantástico te tomó: ${tiempoTotal} segundos`
-                        winAudio.play();
-                    }
-                } else {
-                    setTimeout(() => {
-                        tarjeta1.innerHTML = '';
-                        tarjeta2.innerHTML = '';
-                        tarjeta1.disabled = false;
-                        tarjeta2.disabled = false;
-                        tarjetasDestapadas = 0;
-                        wrongAudio.play();
-                    }, 700);
-                }
-            }
-
-        }
-
-    </script>
 </body>
 </html>

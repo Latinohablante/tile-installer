@@ -11,12 +11,12 @@ import { delet } from "../models/delete.js";
 
 // import { llenarFormulario, llenarSelect } from "../views/utils.js";
 
-export function controlador(formu, event, entidad, elemformu) {
+export function controlador(formu, event, entidad, objeto) {
   const URL = "http://localhost:4000/";
   let url = "";
-  
+
   const datos = formu !== null ? Object.fromEntries(new FormData(formu)) : null;
-  const value = event.target.value;
+  const value = event !== null ? event.target.value : "";
 
   switch (value) {
     case "Agregar":
@@ -27,7 +27,7 @@ export function controlador(formu, event, entidad, elemformu) {
     case "CARGARSELECT":
     case "Buscar":
       url = `${URL}${entidad}/${datos !== null ? datos.id : ""}`;
-      
+
       get(url, formu);
       // get(url, formu).then((data) => console.log("data: " + data))
       break;
@@ -42,33 +42,44 @@ export function controlador(formu, event, entidad, elemformu) {
       formu.reset();
       break;
     case "Registrar":
-        url = URL + entidad;
-        verificarGet(url,datos).then( (dt) => {
-          console.log(dt)
-          if (dt != true) {
-            const postSucces = post(url,datos);
-
-            if (postSucces) {
-              window.location.href = "/index.html";
-            } else {
-              alert("Hubo un error al realizar el registro")
-            }
-          } else {
-            alert("Ingrese los datos nuevamente");
+      url = URL + entidad;
+      verificarGet(url, datos).then(async (dt) => {
+        console.log(dt)
+        if (!dt) {
+          try {
+            await post(url, datos);
+            location.href = "/index.html";
+          } catch (error) {
+            console.error("Error al realizar el registro:", error);
+            alert("Hubo un error al realizar el registro");
           }
-        })
-        break
+          // const postSucces = post(url,datos);
+          // console.log(postSucces)
+          // if (postSucces) {
+          //   window.location.href = "/index.html";
+          // } else {
+          //   alert("Hubo un error al realizar el registro")
+          // }
+        } else {
+          alert("Ingrese los datos nuevamente");
+        }
+      })
+      break
     case "Ingresar":
       url = URL + entidad;
-        verificarUserYPass(url,datos).then( (dt) => {
-          console.log(dt)
-          if (dt == true) {
-            
-            window.location.href = "/index.html";
-          } else {
-            alert("Ingrese los datos nuevamente");
-          }
-        })
-        break
+      verificarUserYPass(url, datos).then((dt) => {
+        console.log(dt)
+        if (dt == true) {
+
+          window.location.href = "/index.html";
+        } else {
+          alert("Ingrese los datos nuevamente");
+        }
+      })
+      break
+    default:
+      var miDato = localStorage.getItem("nombre")
+      url = URL + entidad;
+      put(url,objeto)
   }
 }
