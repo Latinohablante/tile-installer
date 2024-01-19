@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mí</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./views/dinamic.js" type="module" defer></script>
 </head>
 <body>
 
@@ -14,13 +15,14 @@
         <label for="check" class="mostrar-menu">&#8801</label>
     
         <nav class="menu">
+            <a href="#" id="NomUser"></a>
             <a href="./index.html">Inicio</a>
             <a href="./about.html">Sobre mí</a>
             <a href="./trabajos.html">Mis trabajos</a>
             <a href="./testimonios.html">Testimonios</a>
             <a href="./formulario.html">Contácto</a>
             <a href="./juego.html">Juego</a>
-            <a href="./login.html">Log in</a>
+            <a href="./login.html" id="opInicio">Log in</a>
             <form class="buscar" action="https://www.google.com/search" method="get">
                 <!-- Input Busqueda-->
                 <input class="caja" type="search" name="q" id="busqueda" placeholder="Buscar"><input class="lupa" type="submit" value="Enviar">

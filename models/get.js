@@ -38,7 +38,8 @@ export async function verificarGet(url,datos) {
             return true;
         } 
         alert("Registro exitoso");
-        localStorage.setItem(`${datos.user}`, JSON.stringify(datos.user));
+        //localStorage.setItem(`user`, JSON.stringify(datos.user));
+        //localStorage.setItem("estado","activo");
         return false;
         } catch (error) {
             console.error("Error:", error);
@@ -61,7 +62,8 @@ export async function verificarUserYPass(url,datos) {
         const usuarioExistente = dt.find(usu => usu.user === datos.user && usu.password === datos.password);
         if (usuarioExistente) {
             alert("Bienvenido");
-            localStorage.setItem(`${datos.user}`, JSON.stringify(usuarioExistente));
+            localStorage.setItem(`user`, JSON.stringify(usuarioExistente));
+            localStorage.setItem("estado","activo");
             return true;
         } 
         alert("Datos erroneos, ingréselos de nuevo");

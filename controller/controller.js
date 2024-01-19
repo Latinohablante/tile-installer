@@ -76,6 +76,7 @@ export function controlador(formu, event, entidad, objeto) {
           alert("Ingrese los datos nuevamente");
         }
       })
-      break
+      break 
+
   }
 }
