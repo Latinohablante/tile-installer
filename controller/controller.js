@@ -48,7 +48,7 @@ export function controlador(formu, event, entidad, objeto) {
         if (!dt) {
           try {
             await post(url, datos);
-            location.href = "/index.html";
+            location.href = "/login.html";
           } catch (error) {
             console.error("Error al realizar el registro:", error);
             alert("Hubo un error al realizar el registro");
@@ -77,9 +77,5 @@ export function controlador(formu, event, entidad, objeto) {
         }
       })
       break
-    default:
-      var miDato = localStorage.getItem("nombre")
-      url = URL + entidad;
-      put(url,objeto)
   }
 }

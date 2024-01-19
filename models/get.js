@@ -20,6 +20,7 @@ export function get(url, formu) {
       });
   }
 
+// Esta es la función del registro
 export async function verificarGet(url,datos) {
     try {
         const response = await fetch(url, {
@@ -39,21 +40,13 @@ export async function verificarGet(url,datos) {
         alert("Registro exitoso");
         localStorage.setItem(`${datos.user}`, JSON.stringify(datos.user));
         return false;
-            
-        
-        // if (datos.user == dt[0].user) {
-        //     alert("El usuario ya existe")
-        //     return true
-
-        // } 
-        // alert ("Registro exitoso")
-        // return false
         } catch (error) {
             console.error("Error:", error);
             return null
         }
     }
 
+// Esta es la funcion del login
 export async function verificarUserYPass(url,datos) {
     try {
         const response = await fetch(url, {
@@ -68,7 +61,7 @@ export async function verificarUserYPass(url,datos) {
         const usuarioExistente = dt.find(usu => usu.user === datos.user && usu.password === datos.password);
         if (usuarioExistente) {
             alert("Bienvenido");
-            localStorage.setItem(`${datos.user}`, JSON.stringify(datos.user));
+            localStorage.setItem(`${datos.user}`, JSON.stringify(usuarioExistente));
             return true;
         } 
         alert("Datos erroneos, ingréselos de nuevo");

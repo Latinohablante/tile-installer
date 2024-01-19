@@ -72,6 +72,107 @@ html {
     overflow:hidden;
   }
 
+  /* HEADER */
+header {
+  height: 80px;
+  background: #086cb4;
+  padding: 0 50px;
+  color: var(--primer-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  text-transform: uppercase;
+  color: var(--primer-color);
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.menu {
+  display:flex;
+  align-items: center;
+}
+
+.menu a {
+  color: var(--primer-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+  text-align: center;
+}
+.menu form {
+  padding: 20px;
+}
+
+
+
+.mostrar-menu,
+.esconder-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display:none;
+  transition: 0.4s;
+}
+
+.mostrar-menu {
+  order:1;
+}
+.menu a:hover,
+.esconder-menu:hover {
+  color: var(--quinto-color);
+}
+.mostrar-menu:hover {
+  color:var(--quinto-color);
+}
+#check {
+  display: none;
+}
+
+  @media(max-width:818px) {
+    /* HEADER */
+    .mostrar-menu,
+    .esconder-menu {
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        width: 80%;
+        height: 100vh;
+        background: var(--tercer-color);
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 20px 0px;
+        z-index:100;
+        transition: 0.8s;
+        flex-direction: column;
+    }
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+    .menu form {
+        display: block;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    .esconder-menu {
+        position: absolute;
+        top:40px;
+        right: 40px;
+
+    }
+    #check:checked ~ .menu {
+        right:0;
+    }
+    /* PERSONAS */
+    #personas, #personas2 {
+        flex-direction: column;
+    }
+  }
+
   @media (min-width:470px) and (max-width:630px) {
     .form-container {
         width: 350px !important;

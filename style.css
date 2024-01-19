@@ -472,4 +472,11 @@ footer {
         padding: 10px !important;
 
     }
+
+    .contenido-banner h3 {
+        padding:20px 0;
+    }
+    #personas div {
+        padding-top: 70px;
+    }
 }

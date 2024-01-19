@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro</title>
   <link rel="stylesheet" href="style-login-register.css">
+  
   <script src="./views/login.js" type="module" defer></script>
 </head>
 <body>
@@ -12,7 +13,7 @@
     <div class="form-container">
       <h1>Crear cuenta</h1>
       <p>Crea tu cuenta para ingresar.</p>
-      <form id="register-form">
+      <form onsubmit="return false" id="register-form">
         <label for="user" class="sr-only">User</label>
         <input type="text" name="user" id="user" placeholder="Usuario">
         <label for="email" class="sr-only">Email</label>
