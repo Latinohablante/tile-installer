@@ -1,6 +1,25 @@
 // busca el contenido ingresado
 //import { llenarFormulario, llenarSelect } from "../views/login.js";
 
+import { db } from "../db/db.js";
+
+// get entidad "productos"
+/*
+export async function get(EntidadBd){
+    let data = []
+    try {
+        const querySnapshot = await getDocs(collection(db, EntidadBd));
+        querySnapshot.forEach((doc) => {
+            data.push(doc.data())
+        });
+    } catch (error) {
+        console.error(error)
+        return []    
+    }
+
+    return data  
+}
+*/
 export function get(url, formu) {
     return fetch(url, {
       method: "GET",
